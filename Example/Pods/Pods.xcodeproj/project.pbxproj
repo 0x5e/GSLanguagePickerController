@@ -1,0 +1,719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03F7E4C9C14E6C06EEB3F154021A4B74 /* Pods-GSLanguagePickerController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4947D6679CF5F6E21F421B98DBA48D3F /* Pods-GSLanguagePickerController_Example-dummy.m */; };
+		0519DBAFBA798B6D5F3E1496A6FAD907 /* NSBundle+GSLanguage.h in Headers */ = {isa = PBXBuildFile; fileRef = 992CBAAB37DA3202904F6F4BAB00DF39 /* NSBundle+GSLanguage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AE81AA66E59E0DFF34E8C496C09B041 /* NSBundle+GSLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2BE927D2E8E454599D907D86F44E50 /* NSBundle+GSLanguage.m */; };
+		2AA7F73D03BD1E16A05D3EB1A0A35323 /* GSLanguagePickerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED4B098E814F1CD59921846B50E7A7AD /* GSLanguagePickerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C0994C9468CBD594446A3C974D350FE /* Pods-GSLanguagePickerController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 530AFFFCDD4AD89AD6707D3068CC1E86 /* Pods-GSLanguagePickerController_Tests-dummy.m */; };
+		2CE37B25480464E43BCB1094ADE0331E /* Pods-GSLanguagePickerController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D4D96B77DB5522735E24358F904D8D2 /* Pods-GSLanguagePickerController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B8D593B9A3E09E2C4D286D976635DCA /* GSLanguagePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2C4CD3D6635E08A5614BE01356740 /* GSLanguagePickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D8F37B5CFC5DA9CF616CBE42FBC6524 /* GSLanguagePickerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D311972BA131E1A15C2257FF1537BF /* GSLanguagePickerController-dummy.m */; };
+		7FDBFBFF542CA98B8E31B099DD194F6B /* Pods-GSLanguagePickerController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 104E56035514357063CB39964797B9FC /* Pods-GSLanguagePickerController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		891B3B9E5FA8FD651669D9034931787F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		9ACDABB3FDE8FAF519C5008C66564978 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
+		B0FE75E9F1E34FF5D5358D607693548C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		BFA9C69405D23757C525400AE9E4C279 /* GSLanguagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8973439B9AC12B9A5993549A6A6491A /* GSLanguagePickerController.m */; };
+		D73D4B3A38FED5F13E2C4D8A9658762E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D202E26119C0C0ADA417F0BB8EF3CC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10B07995A2B43882C9BF27A4FEC4CC7E;
+			remoteInfo = GSLanguagePickerController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07638D9DA4B9EB99D7A6DD45AFC03B7F /* Pods-GSLanguagePickerController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GSLanguagePickerController_Example-resources.sh"; sourceTree = "<group>"; };
+		104E56035514357063CB39964797B9FC /* Pods-GSLanguagePickerController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GSLanguagePickerController_Tests-umbrella.h"; sourceTree = "<group>"; };
+		10D7DD23EDA3699921A69804F630644E /* Pods_GSLanguagePickerController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GSLanguagePickerController_Example.framework; path = "Pods-GSLanguagePickerController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		301AF1F6573BFE6822E76CAF08F1CB64 /* GSLanguagePickerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GSLanguagePickerController.modulemap; sourceTree = "<group>"; };
+		355A4FF060C85A70B1F85A8816C9680D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D2BE927D2E8E454599D907D86F44E50 /* NSBundle+GSLanguage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+GSLanguage.m"; sourceTree = "<group>"; };
+		3DF1937D80955F5C88FA0FEB3E135DAE /* Pods-GSLanguagePickerController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GSLanguagePickerController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4187B299FC6BF9EFBE23234E4FB82625 /* Pods-GSLanguagePickerController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GSLanguagePickerController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		43DE48EC64903F25F6ACF9FB817C16DE /* Pods-GSLanguagePickerController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GSLanguagePickerController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		4947D6679CF5F6E21F421B98DBA48D3F /* Pods-GSLanguagePickerController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GSLanguagePickerController_Example-dummy.m"; sourceTree = "<group>"; };
+		530AFFFCDD4AD89AD6707D3068CC1E86 /* Pods-GSLanguagePickerController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GSLanguagePickerController_Tests-dummy.m"; sourceTree = "<group>"; };
+		55DEC53B1DDC16629EADD7A5197DFD4E /* Pods-GSLanguagePickerController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GSLanguagePickerController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5CA0147D7146D5326DD6F755B523AAF2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FD2C4CD3D6635E08A5614BE01356740 /* GSLanguagePickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GSLanguagePickerController.h; sourceTree = "<group>"; };
+		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6D4D96B77DB5522735E24358F904D8D2 /* Pods-GSLanguagePickerController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GSLanguagePickerController_Example-umbrella.h"; sourceTree = "<group>"; };
+		750D00C8F6AB9E7565E080B82F64CD52 /* GSLanguagePickerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GSLanguagePickerController.xcconfig; sourceTree = "<group>"; };
+		781F4391CE18404943F8F33FBD853D1F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B44B2FF210D55FEC92F477B9E80E157 /* Pods-GSLanguagePickerController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GSLanguagePickerController_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		949E28B238B58867496EA3EDCEC60E0B /* Pods-GSLanguagePickerController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GSLanguagePickerController_Tests-resources.sh"; sourceTree = "<group>"; };
+		992CBAAB37DA3202904F6F4BAB00DF39 /* NSBundle+GSLanguage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSBundle+GSLanguage.h"; sourceTree = "<group>"; };
+		A6EF9C57D55F121BABADB8216DEF8691 /* GSLanguagePickerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSLanguagePickerController-prefix.pch"; sourceTree = "<group>"; };
+		B218B89368AF46707F5305AF745744DB /* Pods-GSLanguagePickerController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GSLanguagePickerController_Example.modulemap"; sourceTree = "<group>"; };
+		B6E8B1D1C2E031B27AC759B311A6AC29 /* Pods-GSLanguagePickerController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GSLanguagePickerController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B8973439B9AC12B9A5993549A6A6491A /* GSLanguagePickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GSLanguagePickerController.m; sourceTree = "<group>"; };
+		BE6F9169FFB0A1DAFECF9DEB42E95AB4 /* Pods_GSLanguagePickerController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GSLanguagePickerController_Tests.framework; path = "Pods-GSLanguagePickerController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE673B90F8FB35C68900422ED67DFC5 /* Pods-GSLanguagePickerController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GSLanguagePickerController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D076694AC01B21E670D4B23CB7A1769C /* Pods-GSLanguagePickerController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GSLanguagePickerController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D2413E1A63754690368266A0534C5A6D /* Pods-GSLanguagePickerController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GSLanguagePickerController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		D2D311972BA131E1A15C2257FF1537BF /* GSLanguagePickerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GSLanguagePickerController-dummy.m"; sourceTree = "<group>"; };
+		DFADD8199FCB5060702F69888DFE2B5F /* Pods-GSLanguagePickerController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GSLanguagePickerController_Tests.modulemap"; sourceTree = "<group>"; };
+		ED4B098E814F1CD59921846B50E7A7AD /* GSLanguagePickerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSLanguagePickerController-umbrella.h"; sourceTree = "<group>"; };
+		F1633D81F230B05BB9D899A587B1ADFA /* GSLanguagePickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GSLanguagePickerController.framework; path = GSLanguagePickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F465E699C5C5ED47513566A504190C3D /* Pods-GSLanguagePickerController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GSLanguagePickerController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C21EDC1282BCE17FF6E6BDA37E266C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D73D4B3A38FED5F13E2C4D8A9658762E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1950840EDB7ECDE915F0788C9A6195 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				891B3B9E5FA8FD651669D9034931787F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD8CC968836AA59B22F2244E4788F16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0FE75E9F1E34FF5D5358D607693548C /* Foundation.framework in Frameworks */,
+				9ACDABB3FDE8FAF519C5008C66564978 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01A3B00E1F0EFCC3208C483E754169B9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				441B3FAEE83E961DBC846683290042F9 /* Pods-GSLanguagePickerController_Example */,
+				F0BD4A3C20C3FE5DF331B17E7C0D9506 /* Pods-GSLanguagePickerController_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		090890BAF3D00160900E904CBED5F7B6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				301AF1F6573BFE6822E76CAF08F1CB64 /* GSLanguagePickerController.modulemap */,
+				750D00C8F6AB9E7565E080B82F64CD52 /* GSLanguagePickerController.xcconfig */,
+				D2D311972BA131E1A15C2257FF1537BF /* GSLanguagePickerController-dummy.m */,
+				A6EF9C57D55F121BABADB8216DEF8691 /* GSLanguagePickerController-prefix.pch */,
+				ED4B098E814F1CD59921846B50E7A7AD /* GSLanguagePickerController-umbrella.h */,
+				355A4FF060C85A70B1F85A8816C9680D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GSLanguagePickerController";
+			sourceTree = "<group>";
+		};
+		113118DA5073FB284BC7ACEBA7B9024E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1633D81F230B05BB9D899A587B1ADFA /* GSLanguagePickerController.framework */,
+				10D7DD23EDA3699921A69804F630644E /* Pods_GSLanguagePickerController_Example.framework */,
+				BE6F9169FFB0A1DAFECF9DEB42E95AB4 /* Pods_GSLanguagePickerController_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		441B3FAEE83E961DBC846683290042F9 /* Pods-GSLanguagePickerController_Example */ = {
+			isa = PBXGroup;
+			children = (
+				781F4391CE18404943F8F33FBD853D1F /* Info.plist */,
+				B218B89368AF46707F5305AF745744DB /* Pods-GSLanguagePickerController_Example.modulemap */,
+				B6E8B1D1C2E031B27AC759B311A6AC29 /* Pods-GSLanguagePickerController_Example-acknowledgements.markdown */,
+				F465E699C5C5ED47513566A504190C3D /* Pods-GSLanguagePickerController_Example-acknowledgements.plist */,
+				4947D6679CF5F6E21F421B98DBA48D3F /* Pods-GSLanguagePickerController_Example-dummy.m */,
+				D2413E1A63754690368266A0534C5A6D /* Pods-GSLanguagePickerController_Example-frameworks.sh */,
+				07638D9DA4B9EB99D7A6DD45AFC03B7F /* Pods-GSLanguagePickerController_Example-resources.sh */,
+				6D4D96B77DB5522735E24358F904D8D2 /* Pods-GSLanguagePickerController_Example-umbrella.h */,
+				3DF1937D80955F5C88FA0FEB3E135DAE /* Pods-GSLanguagePickerController_Example.debug.xcconfig */,
+				D076694AC01B21E670D4B23CB7A1769C /* Pods-GSLanguagePickerController_Example.release.xcconfig */,
+			);
+			name = "Pods-GSLanguagePickerController_Example";
+			path = "Target Support Files/Pods-GSLanguagePickerController_Example";
+			sourceTree = "<group>";
+		};
+		531B4A3EDDB6C41698F61D64DC6D6DCB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5FD2C4CD3D6635E08A5614BE01356740 /* GSLanguagePickerController.h */,
+				B8973439B9AC12B9A5993549A6A6491A /* GSLanguagePickerController.m */,
+				992CBAAB37DA3202904F6F4BAB00DF39 /* NSBundle+GSLanguage.h */,
+				3D2BE927D2E8E454599D907D86F44E50 /* NSBundle+GSLanguage.m */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				862B1A82761E072534519F34694F86AA /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				113118DA5073FB284BC7ACEBA7B9024E /* Products */,
+				01A3B00E1F0EFCC3208C483E754169B9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		862B1A82761E072534519F34694F86AA /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88E450BB72CF33E36D563910E9F05291 /* GSLanguagePickerController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		88E450BB72CF33E36D563910E9F05291 /* GSLanguagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				903FC1223A5C486950AF119E78265369 /* GSLanguagePickerController */,
+				090890BAF3D00160900E904CBED5F7B6 /* Support Files */,
+			);
+			name = GSLanguagePickerController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		903FC1223A5C486950AF119E78265369 /* GSLanguagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				531B4A3EDDB6C41698F61D64DC6D6DCB /* Classes */,
+			);
+			name = GSLanguagePickerController;
+			path = GSLanguagePickerController;
+			sourceTree = "<group>";
+		};
+		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */,
+				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F0BD4A3C20C3FE5DF331B17E7C0D9506 /* Pods-GSLanguagePickerController_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5CA0147D7146D5326DD6F755B523AAF2 /* Info.plist */,
+				DFADD8199FCB5060702F69888DFE2B5F /* Pods-GSLanguagePickerController_Tests.modulemap */,
+				BFE673B90F8FB35C68900422ED67DFC5 /* Pods-GSLanguagePickerController_Tests-acknowledgements.markdown */,
+				4187B299FC6BF9EFBE23234E4FB82625 /* Pods-GSLanguagePickerController_Tests-acknowledgements.plist */,
+				530AFFFCDD4AD89AD6707D3068CC1E86 /* Pods-GSLanguagePickerController_Tests-dummy.m */,
+				7B44B2FF210D55FEC92F477B9E80E157 /* Pods-GSLanguagePickerController_Tests-frameworks.sh */,
+				949E28B238B58867496EA3EDCEC60E0B /* Pods-GSLanguagePickerController_Tests-resources.sh */,
+				104E56035514357063CB39964797B9FC /* Pods-GSLanguagePickerController_Tests-umbrella.h */,
+				43DE48EC64903F25F6ACF9FB817C16DE /* Pods-GSLanguagePickerController_Tests.debug.xcconfig */,
+				55DEC53B1DDC16629EADD7A5197DFD4E /* Pods-GSLanguagePickerController_Tests.release.xcconfig */,
+			);
+			name = "Pods-GSLanguagePickerController_Tests";
+			path = "Target Support Files/Pods-GSLanguagePickerController_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2642A47015912789587DA674ADBCF6EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CE37B25480464E43BCB1094ADE0331E /* Pods-GSLanguagePickerController_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA7355589B65361CC2B736E18213F395 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AA7F73D03BD1E16A05D3EB1A0A35323 /* GSLanguagePickerController-umbrella.h in Headers */,
+				4B8D593B9A3E09E2C4D286D976635DCA /* GSLanguagePickerController.h in Headers */,
+				0519DBAFBA798B6D5F3E1496A6FAD907 /* NSBundle+GSLanguage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5E17061BB042C5A6C98F54E84DE0899 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FDBFBFF542CA98B8E31B099DD194F6B /* Pods-GSLanguagePickerController_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		10B07995A2B43882C9BF27A4FEC4CC7E /* GSLanguagePickerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2D18BB4349BCE101680EA2D016D35FD /* Build configuration list for PBXNativeTarget "GSLanguagePickerController" */;
+			buildPhases = (
+				CE47C414587D08CB1BC510AFB7A08964 /* Sources */,
+				ECD8CC968836AA59B22F2244E4788F16 /* Frameworks */,
+				BA7355589B65361CC2B736E18213F395 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GSLanguagePickerController;
+			productName = GSLanguagePickerController;
+			productReference = F1633D81F230B05BB9D899A587B1ADFA /* GSLanguagePickerController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7FFF1540857BCAF5612B4E75272D9931 /* Pods-GSLanguagePickerController_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85BACD8B2C69CEAA0725772DA3144947 /* Build configuration list for PBXNativeTarget "Pods-GSLanguagePickerController_Example" */;
+			buildPhases = (
+				333B25B81836585B2C2415A47372D9E8 /* Sources */,
+				C21EDC1282BCE17FF6E6BDA37E266C1B /* Frameworks */,
+				2642A47015912789587DA674ADBCF6EE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3F58E9F0CB4E67E0A1E17C7367FD7FA /* PBXTargetDependency */,
+			);
+			name = "Pods-GSLanguagePickerController_Example";
+			productName = "Pods-GSLanguagePickerController_Example";
+			productReference = 10D7DD23EDA3699921A69804F630644E /* Pods_GSLanguagePickerController_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D7A5A715A6F11854A5B55E20A38DCD34 /* Pods-GSLanguagePickerController_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABAA1635AF087F77917622652B238D57 /* Build configuration list for PBXNativeTarget "Pods-GSLanguagePickerController_Tests" */;
+			buildPhases = (
+				0087C171A48DD961195DED30CD2900BF /* Sources */,
+				CE1950840EDB7ECDE915F0788C9A6195 /* Frameworks */,
+				F5E17061BB042C5A6C98F54E84DE0899 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GSLanguagePickerController_Tests";
+			productName = "Pods-GSLanguagePickerController_Tests";
+			productReference = BE6F9169FFB0A1DAFECF9DEB42E95AB4 /* Pods_GSLanguagePickerController_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 113118DA5073FB284BC7ACEBA7B9024E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10B07995A2B43882C9BF27A4FEC4CC7E /* GSLanguagePickerController */,
+				7FFF1540857BCAF5612B4E75272D9931 /* Pods-GSLanguagePickerController_Example */,
+				D7A5A715A6F11854A5B55E20A38DCD34 /* Pods-GSLanguagePickerController_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0087C171A48DD961195DED30CD2900BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0994C9468CBD594446A3C974D350FE /* Pods-GSLanguagePickerController_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		333B25B81836585B2C2415A47372D9E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F7E4C9C14E6C06EEB3F154021A4B74 /* Pods-GSLanguagePickerController_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE47C414587D08CB1BC510AFB7A08964 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8F37B5CFC5DA9CF616CBE42FBC6524 /* GSLanguagePickerController-dummy.m in Sources */,
+				BFA9C69405D23757C525400AE9E4C279 /* GSLanguagePickerController.m in Sources */,
+				0AE81AA66E59E0DFF34E8C496C09B041 /* NSBundle+GSLanguage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3F58E9F0CB4E67E0A1E17C7367FD7FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GSLanguagePickerController;
+			target = 10B07995A2B43882C9BF27A4FEC4CC7E /* GSLanguagePickerController */;
+			targetProxy = 8D202E26119C0C0ADA417F0BB8EF3CC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		460D4B235DE2A1E47B700DE4E21AC640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55DEC53B1DDC16629EADD7A5197DFD4E /* Pods-GSLanguagePickerController_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GSLanguagePickerController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GSLanguagePickerController_Tests/Pods-GSLanguagePickerController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GSLanguagePickerController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4B46E603B922AE0EF3A33299FF73ADAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DF1937D80955F5C88FA0FEB3E135DAE /* Pods-GSLanguagePickerController_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GSLanguagePickerController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GSLanguagePickerController_Example/Pods-GSLanguagePickerController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GSLanguagePickerController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7820CF194A59F82914FD8EBE14DC52A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 750D00C8F6AB9E7565E080B82F64CD52 /* GSLanguagePickerController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GSLanguagePickerController/GSLanguagePickerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GSLanguagePickerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GSLanguagePickerController/GSLanguagePickerController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GSLanguagePickerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		889A63508714B151D50EC47EAEFC25F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43DE48EC64903F25F6ACF9FB817C16DE /* Pods-GSLanguagePickerController_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GSLanguagePickerController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GSLanguagePickerController_Tests/Pods-GSLanguagePickerController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GSLanguagePickerController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CFCBD5795789C5340ABE7BD134780CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 750D00C8F6AB9E7565E080B82F64CD52 /* GSLanguagePickerController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GSLanguagePickerController/GSLanguagePickerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GSLanguagePickerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GSLanguagePickerController/GSLanguagePickerController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GSLanguagePickerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EC429151DBD48F0BD5B9B3817F02D7E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D076694AC01B21E670D4B23CB7A1769C /* Pods-GSLanguagePickerController_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GSLanguagePickerController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GSLanguagePickerController_Example/Pods-GSLanguagePickerController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GSLanguagePickerController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85BACD8B2C69CEAA0725772DA3144947 /* Build configuration list for PBXNativeTarget "Pods-GSLanguagePickerController_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B46E603B922AE0EF3A33299FF73ADAF /* Debug */,
+				EC429151DBD48F0BD5B9B3817F02D7E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABAA1635AF087F77917622652B238D57 /* Build configuration list for PBXNativeTarget "Pods-GSLanguagePickerController_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				889A63508714B151D50EC47EAEFC25F0 /* Debug */,
+				460D4B235DE2A1E47B700DE4E21AC640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2D18BB4349BCE101680EA2D016D35FD /* Build configuration list for PBXNativeTarget "GSLanguagePickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFCBD5795789C5340ABE7BD134780CCB /* Debug */,
+				7820CF194A59F82914FD8EBE14DC52A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

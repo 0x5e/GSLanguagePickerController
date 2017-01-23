@@ -1,0 +1,16 @@
+PODS:
+  - GSLanguagePickerController (1.0.1)
+
+DEPENDENCIES:
+  - GSLanguagePickerController (from `../`)
+
+EXTERNAL SOURCES:
+  GSLanguagePickerController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GSLanguagePickerController: 0a9d99d0c94033aef356dba3ded858624426fe65
+
+PODFILE CHECKSUM: 5f1f1539e4f68febfb900fcada33075c776d769c
+
+COCOAPODS: 1.1.1

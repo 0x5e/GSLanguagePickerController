@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  GSLanguagePickerController
+
+  Created by 高森 on 2017/1/23.
+  Copyright © 2017年 gaosen. All rights reserved.
+*/
+"Hello" = "Bonjour";
+"Select Language" = "Choisir la langue";
