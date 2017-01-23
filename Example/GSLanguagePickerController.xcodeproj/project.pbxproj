@@ -247,9 +247,6 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = gaosen;
 				TargetAttributes = {
-					6003F589195388D20070C39A = {
-						DevelopmentTeam = DZ746LP8SZ;
-					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -528,7 +525,6 @@
 			baseConfigurationReference = 80789C485F986520860C73A2 /* Pods-GSLanguagePickerController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DZ746LP8SZ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GSLanguagePickerController/GSLanguagePickerController-Prefix.pch";
 				INFOPLIST_FILE = "GSLanguagePickerController/GSLanguagePickerController-Info.plist";
@@ -544,7 +540,6 @@
 			baseConfigurationReference = E58990C57CB2B5C03AE9D5DC /* Pods-GSLanguagePickerController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DZ746LP8SZ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GSLanguagePickerController/GSLanguagePickerController-Prefix.pch";
 				INFOPLIST_FILE = "GSLanguagePickerController/GSLanguagePickerController-Info.plist";
