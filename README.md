@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+GSLanguagePickerController require iOS 8.0+.
+
 ## Installation
 
 GSLanguagePickerController is available through [CocoaPods](http://cocoapods.org). To install

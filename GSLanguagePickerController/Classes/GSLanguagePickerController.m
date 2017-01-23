@@ -8,16 +8,13 @@
 
 #import "GSLanguagePickerController.h"
 
-static NSString * UIKitLocalizedString(NSString *string) {
-    NSBundle *UIKitBundle = [NSBundle bundleForClass:[UIApplication class]];
-    return UIKitBundle ? [UIKitBundle localizedStringForKey:string value:string table:nil] : string;
-}
-
-@interface GSLanguagePickerController () <UISearchResultsUpdating>
+@interface GSLanguagePickerController () <UISearchResultsUpdating, UISearchBarDelegate>
 
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) NSArray *filteredDataSource;
 @property (nonatomic, strong) NSArray *allDataSource;
+@property (nonatomic, strong) NSDictionary *currentDisplayNameDict;
+@property (nonatomic, strong) NSDictionary *targetDisplayNameDict;
 @property (nonatomic, strong) NSString *currentLanguageId;
 
 @end
@@ -38,26 +35,47 @@ static NSString * UIKitLocalizedString(NSString *string) {
 }
 
 - (void)initView {
-    self.navigationItem.title = UIKitLocalizedString(@"Select");
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
+    NSString *InternationalSettingsBundlePath = @"/System/Library/PreferenceBundles/InternationalSettings.bundle";
+#if TARGET_IPHONE_SIMULATOR
+    InternationalSettingsBundlePath = [NSString stringWithFormat:@"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/%@", InternationalSettingsBundlePath];
+#endif
+    NSBundle *InternationalSettingsBundle = [NSBundle bundleWithPath:InternationalSettingsBundlePath];
+    self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"LANGUAGE", @"InternationalSettings", InternationalSettingsBundle, nil);
+    
     if (self.navigationController.viewControllers.count == 1) {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];
     }
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
     
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
     self.searchController.hidesNavigationBarDuringPresentation = NO;
+    self.searchController.searchBar.delegate = self;
     [self.searchController.searchBar sizeToFit];
     self.tableView.tableHeaderView = self.searchController.searchBar;
 }
 
 - (void)initData {
-    NSMutableArray *dataSource = [NSMutableArray arrayWithArray:[NSBundle mainBundle].localizations];
-    [dataSource insertObject:@"" atIndex:0];
-    self.allDataSource = dataSource;
-    
+    self.allDataSource = [NSBundle mainBundle].localizations;
     self.currentLanguageId = [NSBundle defaultLanguage];
+    
+    NSMutableDictionary *currentDisplayNameDict = [NSMutableDictionary dictionary];
+    NSLocale *currentLocale = [NSLocale localeWithLocaleIdentifier:self.currentLanguageId];
+    for (NSString *languageId in self.allDataSource) {
+        NSString *displayName = [currentLocale displayNameForKey:NSLocaleIdentifier value:languageId];
+        [currentDisplayNameDict setObject:displayName forKey:languageId];
+    }
+    self.currentDisplayNameDict = [currentDisplayNameDict copy];
+    
+    NSMutableDictionary *targetDisplayNameDict = [NSMutableDictionary dictionary];
+    for (NSString *languageId in self.allDataSource) {
+        NSLocale *targetLocale = [NSLocale localeWithLocaleIdentifier:languageId];
+        NSString *displayName = [targetLocale displayNameForKey:NSLocaleIdentifier value:languageId];
+        [targetDisplayNameDict setObject:displayName forKey:languageId];
+    }
+    self.targetDisplayNameDict = [targetDisplayNameDict copy];
 }
 
 #pragma mark - action
@@ -67,9 +85,8 @@ static NSString * UIKitLocalizedString(NSString *string) {
 }
 
 - (IBAction)doneAction:(UIBarButtonItem *)button {
-    __weak typeof(self) weakSelf = self;
     [self dismissViewControllerAnimated:YES completion:^{
-        [NSBundle setDefaultLanguage:weakSelf.currentLanguageId];
+        [NSBundle setDefaultLanguage:self.currentLanguageId];
     }];
 }
 
@@ -95,15 +112,9 @@ static NSString * UIKitLocalizedString(NSString *string) {
     }
 
     NSString *languageId = self.dataSource[indexPath.row];
-    NSLocale *locale = [NSLocale localeWithLocaleIdentifier:languageId];
-//    NSLocale *currentLocale = [NSLocale autoupdatingCurrentLocale];
-    NSLocale *currentLocale = [NSLocale localeWithLocaleIdentifier:[NSBundle defaultLanguage]];
-    cell.textLabel.text = [locale displayNameForKey:NSLocaleIdentifier value:languageId];
-    cell.detailTextLabel.text = [currentLocale displayNameForKey:NSLocaleIdentifier value:languageId];
-    cell.accessoryType = [languageId isEqualToString:self.currentLanguageId] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
-    if (languageId.length == 0) {
-        cell.textLabel.text = @"Default";
-    }
+    cell.textLabel.text = [self.targetDisplayNameDict objectForKey:languageId];
+    cell.detailTextLabel.text = [self.currentDisplayNameDict objectForKey:languageId];
+    cell.accessoryType = [self.currentLanguageId hasPrefix:languageId] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     return cell;
 }
 
@@ -116,13 +127,48 @@ static NSString * UIKitLocalizedString(NSString *string) {
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    // TODO
-    NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@", self.searchController.searchBar.text];
-    self.filteredDataSource = [self.allDataSource filteredArrayUsingPredicate:searchPredicate];
-    dispatch_async(dispatch_get_main_queue(), ^{
+    NSString *searchText = self.searchController.searchBar.text;
+    if (searchText.length == 0) {
         [self.tableView reloadData];
-    });
+        return;
+    }
+    
+    NSMutableSet *result = [NSMutableSet set];
+    [self.currentDisplayNameDict enumerateKeysAndObjectsUsingBlock:^(NSString *languageId, NSString *displayName, BOOL *stop) {
+        if ([displayName.lowercaseString containsString:searchText.lowercaseString]) {
+            [result addObject:languageId];
+        }
+    }];
+    [self.targetDisplayNameDict enumerateKeysAndObjectsUsingBlock:^(NSString *languageId, NSString *displayName, BOOL *stop) {
+        if ([displayName.lowercaseString containsString:searchText.lowercaseString]) {
+            [result addObject:languageId];
+        }
+    }];
+
+    NSMutableArray *filteredDataSource = [NSMutableArray array];
+    [self.allDataSource enumerateObjectsUsingBlock:^(NSString *languageId, NSUInteger idx, BOOL *stop) {
+        if ([result containsObject:languageId]) {
+            [filteredDataSource addObject:languageId];
+        }
+    }];
+    self.filteredDataSource = [filteredDataSource copy];
+    
+    [self.tableView reloadData];
 }
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    searchBar.showsCancelButton = YES;
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    if (searchBar.text.length == 0) {
+        searchBar.showsCancelButton = NO;
+    }
+}
+
+#pragma mark -
 
 - (void)dealloc {
     [self.searchController.view removeFromSuperview];
