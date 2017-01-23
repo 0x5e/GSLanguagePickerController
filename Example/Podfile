@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GSLanguagePickerController_Example' do
+  pod 'GSLanguagePickerController', :path => '../'
+
+  target 'GSLanguagePickerController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
