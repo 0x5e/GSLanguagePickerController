@@ -61,21 +61,29 @@
     self.allDataSource = [NSBundle mainBundle].localizations;
     self.currentLanguageId = [NSBundle defaultLanguage];
     
-    NSMutableDictionary *currentDisplayNameDict = [NSMutableDictionary dictionary];
     NSLocale *currentLocale = [NSLocale localeWithLocaleIdentifier:self.currentLanguageId];
-    for (NSString *languageId in self.allDataSource) {
-        NSString *displayName = [currentLocale displayNameForKey:NSLocaleIdentifier value:languageId];
-        [currentDisplayNameDict setObject:displayName forKey:languageId];
-    }
-    self.currentDisplayNameDict = [currentDisplayNameDict copy];
     
+    NSMutableDictionary *currentDisplayNameDict = [NSMutableDictionary dictionary];
     NSMutableDictionary *targetDisplayNameDict = [NSMutableDictionary dictionary];
     for (NSString *languageId in self.allDataSource) {
         NSLocale *targetLocale = [NSLocale localeWithLocaleIdentifier:languageId];
-        NSString *displayName = [targetLocale displayNameForKey:NSLocaleIdentifier value:languageId];
-        [targetDisplayNameDict setObject:displayName forKey:languageId];
+        
+        NSString *currentDisplayName = [currentLocale displayNameForKey:NSLocaleIdentifier value:languageId];
+        [currentDisplayNameDict setObject:currentDisplayName forKey:languageId];
+        
+        NSString *targetDisplayName = [targetLocale displayNameForKey:NSLocaleIdentifier value:languageId];
+        [targetDisplayNameDict setObject:targetDisplayName forKey:languageId];
     }
+    self.currentDisplayNameDict = [currentDisplayNameDict copy];
     self.targetDisplayNameDict = [targetDisplayNameDict copy];
+}
+
+- (NSString *)currentDisplayNameForKey:(NSString *)languageId {
+    return [self.currentDisplayNameDict objectForKey:languageId];
+}
+
+- (NSString *)targetDisplayNameForKey:(NSString *)languageId {
+    return [self.targetDisplayNameDict objectForKey:languageId];
 }
 
 #pragma mark - action
@@ -112,8 +120,8 @@
     }
 
     NSString *languageId = self.dataSource[indexPath.row];
-    cell.textLabel.text = [self.targetDisplayNameDict objectForKey:languageId];
-    cell.detailTextLabel.text = [self.currentDisplayNameDict objectForKey:languageId];
+    cell.textLabel.text = [self targetDisplayNameForKey:languageId];
+    cell.detailTextLabel.text = [self currentDisplayNameForKey:languageId];
     cell.accessoryType = [self.currentLanguageId hasPrefix:languageId] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     return cell;
 }
@@ -127,27 +135,18 @@
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    NSString *searchText = self.searchController.searchBar.text;
+    NSString *searchText = self.searchController.searchBar.text.lowercaseString;
     if (searchText.length == 0) {
         [self.tableView reloadData];
         return;
     }
-    
-    NSMutableSet *result = [NSMutableSet set];
-    [self.currentDisplayNameDict enumerateKeysAndObjectsUsingBlock:^(NSString *languageId, NSString *displayName, BOOL *stop) {
-        if ([displayName.lowercaseString containsString:searchText.lowercaseString]) {
-            [result addObject:languageId];
-        }
-    }];
-    [self.targetDisplayNameDict enumerateKeysAndObjectsUsingBlock:^(NSString *languageId, NSString *displayName, BOOL *stop) {
-        if ([displayName.lowercaseString containsString:searchText.lowercaseString]) {
-            [result addObject:languageId];
-        }
-    }];
 
     NSMutableArray *filteredDataSource = [NSMutableArray array];
     [self.allDataSource enumerateObjectsUsingBlock:^(NSString *languageId, NSUInteger idx, BOOL *stop) {
-        if ([result containsObject:languageId]) {
+        NSString *targetDisplayName = [[self targetDisplayNameForKey:languageId] lowercaseString];
+        NSString *currentDisplayName = [[self currentDisplayNameForKey:languageId] lowercaseString];
+        if ([targetDisplayName containsString:searchText]
+            || [currentDisplayName containsString:searchText]) {
             [filteredDataSource addObject:languageId];
         }
     }];
