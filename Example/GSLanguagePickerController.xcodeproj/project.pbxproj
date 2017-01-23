@@ -17,8 +17,9 @@
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6DCA010C1E362C1800A9A2D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DCA010E1E362C1800A9A2D6 /* Localizable.strings */; };
+		6DCA013C1E36819400A9A2D6 /* GSLanguageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCA013B1E36819400A9A2D6 /* GSLanguageTest.m */; };
+		6DCA013D1E3682E300A9A2D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DCA010E1E362C1800A9A2D6 /* Localizable.strings */; };
 		89D123989F43F96F4854817D /* Pods_GSLanguagePickerController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C721A98A2820DE6F935E7C7 /* Pods_GSLanguagePickerController_Tests.framework */; };
 		B489F66B2E6EAB4839F274DE /* Pods_GSLanguagePickerController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE286177D5CED8385BFD179B /* Pods_GSLanguagePickerController_Example.framework */; };
 /* End PBXBuildFile section */
@@ -52,7 +53,6 @@
 		6003F5AE195388D20070C39A /* GSLanguagePickerController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GSLanguagePickerController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6DCA010D1E362C1800A9A2D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6DCA01101E362C3B00A9A2D6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -61,6 +61,8 @@
 		6DCA01191E362C5300A9A2D6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6DCA011C1E362C6000A9A2D6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6DCA011F1E362C6400A9A2D6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6DCA013A1E36819400A9A2D6 /* GSLanguageTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLanguageTest.h; sourceTree = "<group>"; };
+		6DCA013B1E36819400A9A2D6 /* GSLanguageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLanguageTest.m; sourceTree = "<group>"; };
 		7EE2FC49F706B43D14F04460 /* Pods-GSLanguagePickerController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSLanguagePickerController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GSLanguagePickerController_Tests/Pods-GSLanguagePickerController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		80789C485F986520860C73A2 /* Pods-GSLanguagePickerController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSLanguagePickerController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GSLanguagePickerController_Example/Pods-GSLanguagePickerController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E58990C57CB2B5C03AE9D5DC /* Pods-GSLanguagePickerController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSLanguagePickerController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-GSLanguagePickerController_Example/Pods-GSLanguagePickerController_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,7 +159,8 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
+				6DCA013A1E36819400A9A2D6 /* GSLanguageTest.h */,
+				6DCA013B1E36819400A9A2D6 /* GSLanguageTest.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -290,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DCA013D1E3682E300A9A2D6 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				6DCA013C1E36819400A9A2D6 /* GSLanguageTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
