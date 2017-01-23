@@ -1,5 +1,5 @@
 PODS:
-  - GSLanguagePickerController (1.0.1)
+  - GSLanguagePickerController (1.1.0)
 
 DEPENDENCIES:
   - GSLanguagePickerController (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GSLanguagePickerController: 0a9d99d0c94033aef356dba3ded858624426fe65
+  GSLanguagePickerController: 7d5a5b304ad57d1ddaf7b6e5781bf03d2ff8acfa
 
 PODFILE CHECKSUM: 5f1f1539e4f68febfb900fcada33075c776d769c
 
