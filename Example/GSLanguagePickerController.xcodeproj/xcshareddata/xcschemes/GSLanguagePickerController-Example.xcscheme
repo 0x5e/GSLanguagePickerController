@@ -37,6 +37,20 @@
                BlueprintName = "GSLanguagePickerController_Tests"
                ReferencedContainer = "container:GSLanguagePickerController.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "GSLanguageTest/testNSURLRequest">
+               </Test>
+               <Test
+                  Identifier = "GSLanguageTest/testUIPasteboard">
+               </Test>
+               <Test
+                  Identifier = "GSLanguageTest/testUIWebView">
+               </Test>
+               <Test
+                  Identifier = "GSLanguageTest/testWKWebView">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

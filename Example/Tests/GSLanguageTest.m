@@ -10,8 +10,16 @@
 #import "GSLanguagePickerController.h"
 #import <WebKit/WebKit.h>
 
+@interface UIBarButtonItem ()
+
+- (NSString *)_resolveSystemTitle;
+
+@end
+
+
 @implementation GSLanguageTest
 
+// NSLocalizedString use localizedString from [NSBundle mainBundle]
 - (void)testNSLocalizedString {
     NSString *localizedString;
     
@@ -28,18 +36,19 @@
     XCTAssert([localizedString isEqualToString:@"你好"]);
 }
 
+// UIBarButtonSystemItem use localized string & image from UIKit.framework
 - (void)testUIBarButtonItem {
     UIBarButtonItem *cancelButton;
     NSString *localizedString;
     
     [NSBundle setDefaultLanguage:@"en"];
     cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:nil action:nil];
-    localizedString = cancelButton.title;
+    localizedString = [cancelButton _resolveSystemTitle];
     XCTAssert([localizedString isEqualToString:@"Cancel"]);
     
     [NSBundle setDefaultLanguage:@"zh-Hans"];
     cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:nil action:nil];
-    localizedString = cancelButton.title;
+    localizedString = [cancelButton _resolveSystemTitle];
     XCTAssert([localizedString isEqualToString:@"取消"]);
 }
 

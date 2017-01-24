@@ -27,8 +27,24 @@ NSString *const kDefaultLanguage = @"AppleLanguages";
         lang = [self.preferredLocalizations firstObject];
     }
     
-    // TODO: have trouble in .../UIKit.framework/English.lproj
     NSString *langBundlePath = [self pathForResource:lang ofType:@"lproj"];
+    
+    // Try legacy lproj name (Used in UIKit.framework)
+    if (!langBundlePath) {
+        // Example: English.lproj French.lproj Spanish.lproj
+        NSLocale *locale = [NSLocale localeWithLocaleIdentifier:@"en"];
+        NSString *displayName = [locale displayNameForKey:NSLocaleIdentifier value:lang];
+        langBundlePath = [self pathForResource:displayName ofType:@"lproj"];
+    }
+    
+    if (!langBundlePath) {
+        // Example: zh_CN.lproj zh_HK.lproj en_GB.lproj
+        // ⚠️ Use system region code
+        NSLocale *locale = [NSLocale localeWithLocaleIdentifier:lang];
+        NSString *region = [locale objectForKey:NSLocaleCountryCode] ?: [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode];
+        NSString *lang_region = [NSString stringWithFormat:@"%@_%@", [locale objectForKey:NSLocaleLanguageCode], region];
+        langBundlePath = [self pathForResource:lang_region ofType:@"lproj"];
+    }
     
     if (langBundlePath) {
         NSBundle *bundle = [NSBundle bundleWithPath:langBundlePath];
