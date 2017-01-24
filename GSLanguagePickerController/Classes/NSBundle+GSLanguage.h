@@ -12,6 +12,7 @@ extern NSString *const NSCurrentLocaleDidChangeNotification;
 
 @interface NSBundle (GSLanguage)
 
-@property (nonatomic, strong, class) NSString *defaultLanguage;
++ (void)setDefaultLanguage:(NSString *)languageId;
++ (NSString *)defaultLanguage;
 
 @end
