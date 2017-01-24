@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GSLanguagePickerController'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'Support in-app runtime language switch, without application relaunch.'
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,7 @@ GSLanguagePickerController is the imitate version of `Settings > General > Langu
                        DESC
 
   s.homepage         = 'https://github.com/0x5e/GSLanguagePickerController'
-  s.screenshot       = 'https://github.com/0x5e/GSLanguagePickerController/blob/master/screenshoot.png'
+  s.screenshot       = 'https://raw.githubusercontent.com/0x5e/GSLanguagePickerController/master/screenshoot.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'gaosen' => '0x5e@sina.cn' }
   s.source           = { :git => 'https://github.com/0x5e/GSLanguagePickerController.git', :tag => s.version.to_s }
