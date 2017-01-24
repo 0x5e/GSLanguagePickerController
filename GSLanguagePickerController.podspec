@@ -22,7 +22,7 @@ GSLanguagePickerController is the imitate version of `Settings > General > Langu
                        DESC
 
   s.homepage         = 'https://github.com/0x5e/GSLanguagePickerController'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshot       = 'https://github.com/0x5e/GSLanguagePickerController/blob/master/screenshoot.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'gaosen' => '0x5e@sina.cn' }
   s.source           = { :git => 'https://github.com/0x5e/GSLanguagePickerController.git', :tag => s.version.to_s }
