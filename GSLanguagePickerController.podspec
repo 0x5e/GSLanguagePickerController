@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-GSLanguagePickerController is the imitate version of `Settings > General > Language & Region > iPhone Langage` ViewController. Support dynamic language switch, without application relaunch.
+GSLanguagePickerController is the imitate version of `Settings > General > Language & Region > iPhone Langage` ViewController. Support dynamic language switch, without application relaunch. The localizedString comes from `UIKit.framework/*.lproj` & `NSLocale`, no additional resources required.
                        DESC
 
   s.homepage         = 'https://github.com/0x5e/GSLanguagePickerController'

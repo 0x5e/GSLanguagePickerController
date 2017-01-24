@@ -42,14 +42,14 @@
     NSString *localizedString;
     
     [NSBundle setDefaultLanguage:@"en"];
-    cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:nil action:nil];
+    cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:nil action:nil];
     localizedString = [cancelButton _resolveSystemTitle];
-    XCTAssert([localizedString isEqualToString:@"Cancel"]);
+    XCTAssert([localizedString isEqualToString:@"Done"]);
     
-    [NSBundle setDefaultLanguage:@"zh-Hans"];
-    cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:nil action:nil];
+    [NSBundle setDefaultLanguage:@"fr"];
+    cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:nil action:nil];
     localizedString = [cancelButton _resolveSystemTitle];
-    XCTAssert([localizedString isEqualToString:@"取消"]);
+    XCTAssert([localizedString isEqualToString:@"OK"]);
 }
 
 - (void)testNSURLRequest {
