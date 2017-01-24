@@ -42,6 +42,9 @@
                   Identifier = "GSLanguageTest/testNSURLRequest">
                </Test>
                <Test
+                  Identifier = "GSLanguageTest/testUIBarButtonItem">
+               </Test>
+               <Test
                   Identifier = "GSLanguageTest/testUIPasteboard">
                </Test>
                <Test
