@@ -7,7 +7,7 @@
 
 ## Screenshoot
 
-![](2017-01-24 16_02_14.gif)
+![](screenshoot.gif)
 
 ## Features
 
