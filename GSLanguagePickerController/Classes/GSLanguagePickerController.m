@@ -42,7 +42,9 @@
     InternationalSettingsBundlePath = [NSString stringWithFormat:@"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/%@", InternationalSettingsBundlePath];
 #endif
     NSBundle *InternationalSettingsBundle = [NSBundle bundleWithPath:InternationalSettingsBundlePath];
-    self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"LANGUAGE", @"InternationalSettings", InternationalSettingsBundle, nil);
+    
+    if ([self.title isEqualToString:@""])
+        self.title = NSLocalizedStringFromTableInBundle(@"LANGUAGE", @"InternationalSettings", InternationalSettingsBundle, nil);
     
     if (self.navigationController.viewControllers.count == 1) {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];

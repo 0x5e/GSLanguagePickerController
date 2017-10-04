@@ -81,6 +81,9 @@ There are cases you don't want to press the done button to change the language. 
 
 This way, the done button will be hidden and the notification will be dispatched on row select.
 
+You can also set the title for the VC by specifying the title:
+
+```vc.title=@"This is my title"```
 
 ## Reference
 
