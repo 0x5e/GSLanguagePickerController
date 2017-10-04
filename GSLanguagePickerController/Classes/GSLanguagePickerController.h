@@ -11,4 +11,6 @@
 
 @interface GSLanguagePickerController : UITableViewController
 
+@property BOOL useDoneButton;
+
 @end
