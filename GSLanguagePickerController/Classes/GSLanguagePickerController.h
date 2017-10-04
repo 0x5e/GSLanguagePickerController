@@ -12,5 +12,6 @@
 @interface GSLanguagePickerController : UITableViewController
 
 @property BOOL useDoneButton;
-
+@property (nonatomic, retain) UIColor *cellSelectedBackgroundColor, *cellSelectedFontColor,*cellTintColor;
+@property (nonatomic, retain) UIFont *cellFont, *cellDetailFont;
 @end
