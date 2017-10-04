@@ -15,7 +15,7 @@
 - Full language supported
 - Runtime language switch
 - No relaunch application
-- Much like system `ViewController` in `Settings > General > Language & Region > iPhone Langage`.
+- Much like system `ViewController` in `Settings > General > Language & Region > iPhone Language`.
 
 ## Usage
 
@@ -64,6 +64,23 @@ And you can also observing language changed notification `NSCurrentLocaleDidChan
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 ```
+## Customizing
+In order to color/font match your project. There are five simple configuration options. Find them below:
+
+```
+vc.cellSelectedFontColor = [UIColor whiteColor];
+vc.cellSelectedBackgroundColor = [UIColor blackColor];
+vc.cellTintColor = neoGreenColor;
+vc.cellFont = [UIFont fontWithName:@"HelveticaNeue" size:16.0];
+vc.cellDetailFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0];
+```
+
+There are cases you don't want to press the done button to change the language. You can call a boolean on the view controller like this:
+
+```vc.useDoneButton = NO;```
+
+This way, the done button will be hidden and the notification will be dispatched on row select.
+
 
 ## Reference
 

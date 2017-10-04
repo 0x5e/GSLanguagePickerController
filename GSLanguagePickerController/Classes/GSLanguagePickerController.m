@@ -25,7 +25,7 @@
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
     if (self = [super initWithStyle:UITableViewStyleGrouped]) {
-        
+
     }
     return self;
 }
@@ -125,6 +125,33 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        
+        //update selected font color
+        if (self.cellSelectedFontColor) {
+            cell.textLabel.highlightedTextColor = _cellSelectedFontColor;
+            cell.detailTextLabel.highlightedTextColor = _cellSelectedFontColor;
+        }
+        
+        //background color
+        if (self.cellSelectedBackgroundColor) {
+            UIView *selectionColor = [[UIView alloc] init];
+            selectionColor.backgroundColor = _cellSelectedBackgroundColor;
+            cell.selectedBackgroundView = selectionColor;
+        }
+        
+        //cell font
+        if (self.cellFont)
+            cell.textLabel.font = _cellDetailFont;
+
+        //cell detail font
+        if (self.cellDetailFont)
+            cell.textLabel.font = _cellFont;
+
+        //set tintcolor of cell
+        if (self.cellTintColor)
+            cell.tintColor = _cellTintColor;
+
+        
     }
 
     NSString *languageId = self.dataSource[indexPath.row];
@@ -136,10 +163,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.currentLanguageId = self.dataSource[indexPath.row];
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    [tableView reloadData];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     if (!self.useDoneButton)
         [self doneAction:nil];
+
+    for (int row = 0; row < [tableView numberOfRowsInSection:0]; row++) {
+        NSIndexPath* cellPath = [NSIndexPath indexPathForRow:row inSection:0];
+        UITableViewCell* cell = [tableView cellForRowAtIndexPath:cellPath];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    
+    UITableViewCell* checkCell = [tableView cellForRowAtIndexPath:indexPath];
+    checkCell.accessoryType = UITableViewCellAccessoryCheckmark;
+
+    
 }
 
 #pragma mark - UISearchResultsUpdating
