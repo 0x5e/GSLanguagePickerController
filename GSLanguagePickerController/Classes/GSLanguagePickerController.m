@@ -17,13 +17,15 @@
 @property (nonatomic, strong) NSDictionary *targetDisplayNameDict;
 @property (nonatomic, strong) NSString *currentLanguageId;
 
+
+
 @end
 
 @implementation GSLanguagePickerController
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
     if (self = [super initWithStyle:UITableViewStyleGrouped]) {
-        ;
+        
     }
     return self;
 }
@@ -46,7 +48,9 @@
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];
     }
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
+    if (self.useDoneButton)
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
+    
     
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
@@ -93,9 +97,13 @@
 }
 
 - (IBAction)doneAction:(UIBarButtonItem *)button {
-    [self dismissViewControllerAnimated:YES completion:^{
+    if (self.useDoneButton) {
+        [self dismissViewControllerAnimated:YES completion:^{
+            [NSBundle setDefaultLanguage:self.currentLanguageId];
+        }];
+    } else {
         [NSBundle setDefaultLanguage:self.currentLanguageId];
-    }];
+    }
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
@@ -130,6 +138,8 @@
     self.currentLanguageId = self.dataSource[indexPath.row];
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     [tableView reloadData];
+    if (!self.useDoneButton)
+        [self doneAction:nil];
 }
 
 #pragma mark - UISearchResultsUpdating
